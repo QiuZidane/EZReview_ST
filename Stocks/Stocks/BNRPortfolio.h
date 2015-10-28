@@ -11,5 +11,6 @@
 @interface BNRPortfolio : BNRStockHolding
 
 @property (nonatomic) float totalValue;
+@property (nonatomic) NSMutableArray *holdings;
 
 @end
