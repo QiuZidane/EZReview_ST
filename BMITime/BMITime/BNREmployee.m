@@ -9,11 +9,22 @@
 #import "BNREmployee.h"
 #import "BNRAsset.h"
 
+
+
+@interface BNREmployee ()
+{
+    NSMutableArray *_assets;
+}
+@property (nonatomic) unsigned int officeAlarmCode;
+
+@end
+
 @implementation BNREmployee
 
 -(double)yearOfEmployment
 {
     if (self.hireDate) {
+        
         NSDate *now = [NSDate date];
         NSTimeInterval secs = [now timeIntervalSinceDate:self.hireDate];
         return secs / 31557600.0;
@@ -51,6 +62,17 @@
     }
     [_assets addObject:a];
 }
+
+-(void)removeAssets:(BNRAsset *)a
+{
+    //assets是否为nil？
+    if (!_assets) {
+        //创建数组
+        _assets = [[NSMutableArray alloc]init];
+    }
+    [_assets removeObject:a];
+}
+
 
 -(unsigned int)valueOfAssets
 {

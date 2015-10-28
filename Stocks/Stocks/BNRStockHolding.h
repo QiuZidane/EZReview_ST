@@ -15,6 +15,9 @@
     int _numberOfShares;
 }
 
+@property (nonatomic)NSString *stockName;
+@property (nonatomic)NSString *symbol;
+
 -(float)purchaseSharePrice;
 -(void)setPurchaseSharePrice:(float)p;
 -(float)currentSharePrice;

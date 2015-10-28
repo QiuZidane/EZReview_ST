@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BNRStockHolding.h"
 #import "BNRForeignStockHolding.h"
+#import "BNRPortfolio.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -20,14 +21,20 @@ int main(int argc, const char * argv[]) {
         [stock1 setPurchaseSharePrice:2.30];
         [stock1 setCurrentSharePrice:4.50];
         [stock1 setNumberOfShares:40];
+        stock1.stockName = @"s1";
+        stock1.symbol = @"A";
         
         [stock2 setPurchaseSharePrice:12.19];
         [stock2 setCurrentSharePrice:10.56];
         [stock2 setNumberOfShares:90];
+        stock2.stockName = @"s2";
+        stock2.symbol = @"B";
         
         [stock3 setPurchaseSharePrice:45.10];
         [stock3 setCurrentSharePrice:49.51];
         [stock3 setNumberOfShares:210];
+        stock3.stockName = @"s3";
+        stock3.symbol = @"C";
         
         NSMutableArray *stockArray = [NSMutableArray array];
         [stockArray addObject:stock1];
@@ -44,15 +51,29 @@ int main(int argc, const char * argv[]) {
         forStock1.currentSharePrice = 4.50;
         forStock1.numberOfShares = 40;
         forStock1.conversionRate = 0.94;
+        forStock1.stockName = @"fs1";
+        forStock1.symbol = @"D";
         
         [stockArray addObject:forStock1];
         
+        BNRPortfolio *pf = [[BNRPortfolio alloc]init];
+        pf.stockName = @"Portfolio";
+        
         for (BNRStockHolding *s in stockArray) {
             NSLog(@"costInDollars = %.1f",[s costInDollars]);
+            [pf getStock:s];
         }
         
+        NSLog(@"totalValue=%.2f",[pf totalValue]);
+
+        [pf removeStock:stock3];
+        NSLog(@"totalValue=%.2f",[pf totalValue]);
         
         
-    }
+        //sleep(2);//等待2秒
+        
+    }//@autoreleasepool结束后会销毁所有对象(除非leak了)
+    
+    
     return 0;
 }

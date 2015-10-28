@@ -51,11 +51,14 @@ int main(int argc, const char * argv[]) {
         for (int i =0; i<5; i++) {
             //创建BNREmployee实例
             BNREmployee *mikey = [[BNREmployee alloc]init];
+           
+
             
             //为实例变量赋值
             mikey.weightInKilos = 90 + i;
             mikey.heightInMeters = 1.8 - i/10.0;
             mikey.employeeID = i;
+            
             
             //将创建的BNREmployee实例加入数组
             [employees addObject:mikey];
@@ -82,6 +85,8 @@ int main(int argc, const char * argv[]) {
             //将BNRAsset对象赋给该BNREmployee对象
             [randomEmployee addAssets:asset];
             
+            [randomEmployee removeAssets:asset];
+            
         }
         
         NSLog(@"Employees: %@", employees);
@@ -92,10 +97,16 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"Giving up ownership of arrays");
         
-        employees = nil;
+        employees[0] = @"123";
+        
+        NSLog(@"222");
         
         
+        [employees removeAllObjects];   //removeabject后立刻调用dealloc，
+//        employees = nil;              //而指针指向nil貌似要等autoreleasepool来释放
         
+        NSLog(@"111");
+//        sleep(1000);
         
         
         

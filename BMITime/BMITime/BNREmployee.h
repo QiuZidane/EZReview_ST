@@ -11,12 +11,12 @@
 @class BNRAsset; //----->????告诉编译器程序有一个名为BNRAsset的类
 
 @interface BNREmployee : BNRPerson
-{
-    NSMutableArray *_assets;
-}
+//{
+//    NSMutableArray *_assets;  --放到私有区(类扩展)
+//}
 
 @property (nonatomic) unsigned int employeeID;
-@property (nonatomic) unsigned int officeAlarmCode;
+//@property (nonatomic) unsigned int officeAlarmCode; --放到私有区(类扩展)
 @property (nonatomic) NSDate *hireDate;
 @property (nonatomic) NSString *lastName;
 @property (nonatomic) BNRPerson *spouse;
@@ -28,6 +28,7 @@
 
 -(double)yearOfEmployment;
 -(void)addAssets:(BNRAsset *)a;
+-(void)removeAssets:(BNRAsset *)a;
 -(unsigned int)valueOfAssets;
 
 

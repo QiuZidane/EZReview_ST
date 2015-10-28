@@ -43,9 +43,14 @@
     return _currentSharePrice * _numberOfShares;
 }
 
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"purchaseSharePrice = %.2f",self.costInDollars];
+}
+
 -(void)dealloc
 {
-    NSLog(@"dealocation....");
+    NSLog(@"%@ is dealocation..",self.stockName);
 }
 
 

@@ -7,10 +7,14 @@
 //
 
 #import "BNRStockHolding.h"
+#import "BNRForeignStockHolding.h"
 
 @interface BNRPortfolio : BNRStockHolding
 
-@property (nonatomic) float totalValue;
-@property (nonatomic) NSMutableArray *holdings;
+//@property (nonatomic) NSMutableArray *holdings;
+-(void)getStock:(BNRStockHolding *)s;
+-(void)getFStock:(BNRForeignStockHolding *)fs;
+-(void)removeStock:(BNRStockHolding *)s;
+-(float)totalValue;
 
 @end

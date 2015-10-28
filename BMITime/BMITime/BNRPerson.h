@@ -12,6 +12,7 @@
 
 @property (nonatomic) float heightInMeters;
 @property (nonatomic) int weightInKilos;
+@property (nonatomic) NSMutableArray *friends;
 
 /* 用属性替代实例变量和存取方法
 {

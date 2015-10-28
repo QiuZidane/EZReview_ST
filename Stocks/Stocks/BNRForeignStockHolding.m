@@ -19,4 +19,9 @@
     return [super valueInDollars]*self.conversionRate;
 }
 
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"FSpurchaseSharePrice = %.2f",self.costInDollars];
+}
+
 @end
