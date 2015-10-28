@@ -70,7 +70,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"totalValue=%.2f",[pf totalValue]);
         
         
-        //sleep(2);//等待2秒
+        //sleep(2);//等待2秒;
         
     }//@autoreleasepool结束后会销毁所有对象(除非leak了)
     
