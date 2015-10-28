@@ -58,15 +58,18 @@ int main(int argc, const char * argv[]) {
         
         BNRPortfolio *pf = [[BNRPortfolio alloc]init];
         pf.stockName = @"Portfolio";
+        pf.holdings = [[NSMutableArray alloc]init];
         
         for (BNRStockHolding *s in stockArray) {
             NSLog(@"costInDollars = %.1f",[s costInDollars]);
-            [pf getStock:s];
+            [pf.holdings addObject:s];
+//            [pf getStock:s];
         }
+//        pf.holdings = stockArray;
         
         NSLog(@"totalValue=%.2f",[pf totalValue]);
 
-        [pf removeStock:stock3];
+//        [pf removeStock:stock3];
         NSLog(@"totalValue=%.2f",[pf totalValue]);
         
         

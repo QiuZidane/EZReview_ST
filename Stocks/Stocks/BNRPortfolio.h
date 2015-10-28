@@ -11,10 +11,10 @@
 
 @interface BNRPortfolio : BNRStockHolding
 
-//@property (nonatomic) NSMutableArray *holdings;
--(void)getStock:(BNRStockHolding *)s;
--(void)getFStock:(BNRForeignStockHolding *)fs;
--(void)removeStock:(BNRStockHolding *)s;
+@property (nonatomic) NSMutableArray *holdings; //
+//-(void)getStock:(BNRStockHolding *)s;
+//-(void)getFStock:(BNRForeignStockHolding *)fs;
+//-(void)removeStock:(BNRStockHolding *)s;
 -(float)totalValue;
 
 @end
