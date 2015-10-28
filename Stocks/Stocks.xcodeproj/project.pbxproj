@@ -10,6 +10,7 @@
 		8E6FDCC41BDF321A000C4924 /* BNRForeignStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6FDCC31BDF321A000C4924 /* BNRForeignStockHolding.m */; };
 		8EB8EDC81BDE52E100432502 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB8EDC71BDE52E100432502 /* main.m */; };
 		8EB8EDD01BDE52F400432502 /* BNRStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB8EDCF1BDE52F400432502 /* BNRStockHolding.m */; };
+		8ECEE20A1BE0C17900081253 /* BNRPortfolio.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEE2091BE0C17900081253 /* BNRPortfolio.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		8EB8EDC71BDE52E100432502 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8EB8EDCE1BDE52F400432502 /* BNRStockHolding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRStockHolding.h; sourceTree = "<group>"; };
 		8EB8EDCF1BDE52F400432502 /* BNRStockHolding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRStockHolding.m; sourceTree = "<group>"; };
+		8ECEE2081BE0C17900081253 /* BNRPortfolio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRPortfolio.h; sourceTree = "<group>"; };
+		8ECEE2091BE0C17900081253 /* BNRPortfolio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRPortfolio.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				8EB8EDCF1BDE52F400432502 /* BNRStockHolding.m */,
 				8E6FDCC21BDF321A000C4924 /* BNRForeignStockHolding.h */,
 				8E6FDCC31BDF321A000C4924 /* BNRForeignStockHolding.m */,
+				8ECEE2081BE0C17900081253 /* BNRPortfolio.h */,
+				8ECEE2091BE0C17900081253 /* BNRPortfolio.m */,
 			);
 			path = Stocks;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E6FDCC41BDF321A000C4924 /* BNRForeignStockHolding.m in Sources */,
+				8ECEE20A1BE0C17900081253 /* BNRPortfolio.m in Sources */,
 				8EB8EDC81BDE52E100432502 /* main.m in Sources */,
 				8EB8EDD01BDE52F400432502 /* BNRStockHolding.m in Sources */,
 			);
