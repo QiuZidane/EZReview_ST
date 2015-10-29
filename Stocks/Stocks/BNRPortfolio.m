@@ -9,7 +9,7 @@
 #import "BNRPortfolio.h"
 
 @interface BNRPortfolio ()
-//@property (nonatomic) NSMutableArray *holdings;
+@property (nonatomic) NSMutableArray *holdings;
 @end
 
 @implementation BNRPortfolio
