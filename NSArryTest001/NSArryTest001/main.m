@@ -24,6 +24,26 @@ int main(int argc, const char * argv[]) {
         for (NSDate *d in dateList) {
             NSLog(@"here is a date :%@",d);
         }
+        
+        NSMutableArray *list = [[NSMutableArray alloc]init];
+        NSNumber *n1 = @4.1;
+        [list addObject:n1];
+        [list addObject:@5.6];
+        
+        NSLog(@"list = %@",list);
+        NSLog(@"list[0]=%@",list[0]);
+        NSNumber *number1 = list[0];
+        NSNumber *number2 = list[1];
+        NSLog(@"number1=%@,  number2=%@",number1,number2);
+        
+        NSPoint somePoint = NSMakePoint(100,100);
+        NSValue *pointValue = [NSValue valueWithPoint:somePoint];
+        [list addObject:pointValue];
+        NSLog(@"list[2]=%@",list[2]);
+        
+        [list addObject:[NSNull null]];
+        NSLog(@"list[3]=%@",list[3]);
+        
     }
     return 0;
 }
