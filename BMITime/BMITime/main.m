@@ -85,7 +85,9 @@ int main(int argc, const char * argv[]) {
             //将BNRAsset对象赋给该BNREmployee对象
             [randomEmployee addAssets:asset];
             
-            [randomEmployee removeAssets:asset];
+            NSLog(@"准备释放");
+            
+            //[randomEmployee removeAssets:asset];
             
         }
         
@@ -106,10 +108,13 @@ int main(int argc, const char * argv[]) {
 //        employees = nil;              //而指针指向nil貌似要等autoreleasepool来释放
         
         NSLog(@"111");
-//        sleep(1000);
+      
+        
         
         
         
     }
+    
+    sleep(100);
     return 0;
 }

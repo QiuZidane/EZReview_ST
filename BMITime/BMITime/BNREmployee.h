@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRPerson.h"
-@class BNRAsset; //----->????告诉编译器程序有一个名为BNRAsset的类
+@class BNRAsset; //----->告诉编译器程序有一个名为BNRAsset的类,不会把实例变量和方法都导入
+
+
 
 @interface BNREmployee : BNRPerson
 //{
