@@ -45,12 +45,12 @@
 
 -(NSString *)description
 {
-    return [NSString stringWithFormat:@"purchaseSharePrice = %.2f",self.costInDollars];
+    return [NSString stringWithFormat:@"%@ has stock price of : %.1f",self.ownerName, self.costInDollars];
 }
 
 -(void)dealloc
 {
-    NSLog(@"%@ is dealocation..",self.stockName);
+    NSLog(@"%@ is dealocation..",self.ownerName);
 }
 
 

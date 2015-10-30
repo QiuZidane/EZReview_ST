@@ -9,12 +9,11 @@
 #import "BNRStockHolding.h"
 #import "BNRForeignStockHolding.h"
 
-@interface BNRPortfolio : BNRStockHolding
+@interface BNRPortfolio : NSObject
 
-@property (nonatomic) NSMutableArray *holdings; //
-//-(void)getStock:(BNRStockHolding *)s;
-//-(void)getFStock:(BNRForeignStockHolding *)fs;
-//-(void)removeStock:(BNRStockHolding *)s;
+@property (nonatomic) NSMutableArray *holdings;//持有股票组合
+
 -(float)totalValue;
+-(NSArray *)sortByValueInDollars;   //按美元排序
 
 @end

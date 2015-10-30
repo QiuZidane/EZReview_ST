@@ -10,18 +10,18 @@
 
 @implementation BNRForeignStockHolding
 
--(float)costInDollars
+-(float)costInDollars       //换算成美元
 {
     return [super costInDollars]*self.conversionRate;
 }
--(float)valueInDollars
+-(float)valueInDollars      //换算成美元
 {
     return [super valueInDollars]*self.conversionRate;
 }
 
 -(NSString *)description
 {
-    return [NSString stringWithFormat:@"FSpurchaseSharePrice = %.2f",self.costInDollars];
+    return [NSString stringWithFormat:@"%@ has foreignstock price of : %.1f",self.ownerName, self.costInDollars];
 }
 
 @end

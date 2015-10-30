@@ -8,7 +8,7 @@
 
 #import "BNRStockHolding.h"
 
-@interface BNRForeignStockHolding : BNRStockHolding
+@interface BNRForeignStockHolding : BNRStockHolding //这是外币股票，本币美元
 
 @property (nonatomic) float conversionRate; //利率，本地货币*conversionRate=美元价格
 
