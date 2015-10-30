@@ -55,7 +55,7 @@ int main(int argc, const char * argv[]) {
         forStock1.numberOfShares = 40;
         forStock1.conversionRate = 0.94;
         forStock1.ownerName = @"owner4";
-        forStock1.symbol = @"BBB";
+        forStock1.symbol = @"AAA";
         
         [stockArray addObject:forStock1];
         
@@ -67,9 +67,12 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@",pf);
         
         //使用sortByValueInDollars方法排序
-        NSArray *sortArray = [pf sortByValueInDollars];
-        NSLog(@"%@",sortArray);
+        NSArray *priceSortArray = [pf sortByValueInDollars];
+        NSLog(@"%@",priceSortArray);
  
+        NSArray *symbolSortArray = [pf sortBySymbol];
+        NSLog(@"%@",symbolSortArray);
+        
         
         //sleep(2);//等待2秒;
         

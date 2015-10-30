@@ -45,7 +45,7 @@
 
 -(NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ has stock price of : %.1f",self.ownerName, self.costInDollars];
+    return [NSString stringWithFormat:@"%@ (symbol = %@)has stock price of : %.1f",self.ownerName, self.symbol ,self.costInDollars];
 }
 
 -(void)dealloc

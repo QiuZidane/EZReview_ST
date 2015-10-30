@@ -21,7 +21,7 @@
 
 -(NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ has foreignstock price of : %.1f",self.ownerName, self.costInDollars];
+    return [NSString stringWithFormat:@"%@ (symbol = %@)has ForStock price of : %.1f",self.ownerName, self.symbol ,self.costInDollars];
 }
 
 @end

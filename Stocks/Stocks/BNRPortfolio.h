@@ -15,5 +15,6 @@
 
 -(float)totalValue;
 -(NSArray *)sortByValueInDollars;   //按美元排序
+-(NSArray *)sortBySymbol;
 
 @end

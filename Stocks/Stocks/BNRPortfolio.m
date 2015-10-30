@@ -14,18 +14,17 @@
 
 @implementation BNRPortfolio
 
-//-(id)init{
-//    if ([super init]) {
-//        NSMutableArray *array = [[NSMutableArray alloc]init];
-//        self.holdings
-//    }
-//}
-
-
 -(NSArray *)sortByValueInDollars
 {
     NSSortDescriptor *price = [NSSortDescriptor sortDescriptorWithKey:@"valueInDollars" ascending:NO];
     [_holdings sortUsingDescriptors:@[price]];
+    return _holdings;
+}
+
+-(NSArray *)sortBySymbol
+{
+    NSSortDescriptor *symbol = [NSSortDescriptor sortDescriptorWithKey:@"symbol" ascending:YES];
+    [_holdings sortUsingDescriptors:@[symbol]];
     return _holdings;
 }
 
