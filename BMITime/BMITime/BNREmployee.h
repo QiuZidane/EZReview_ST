@@ -5,6 +5,7 @@
 //  Created by QiuZidane on 15/10/26.
 //  Copyright © 2015年 QiuZidane. All rights reserved.
 //
+//
 
 #import <Foundation/Foundation.h>
 #import "BNRPerson.h"
@@ -24,7 +25,8 @@
 @property (nonatomic) BNRPerson *spouse;
 @property (nonatomic) NSMutableArray *children;
 
-@property (nonatomic,copy)NSArray *assets; //-- 貌似用NSMutableArray也一样。。。
+//@property (nonatomic,copy)NSArray *assets;  //--改为用NSSet来存放assets
+@property (nonatomic,copy)NSSet *assets;
 
 
 

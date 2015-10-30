@@ -13,7 +13,8 @@
 
 @interface BNREmployee ()
 {
-    NSMutableArray *_assets;
+//    NSMutableArray *_assets;
+    NSMutableSet *_assets;
 }
 @property (nonatomic) unsigned int officeAlarmCode;
 
@@ -42,13 +43,13 @@
 
 
 //属性的存取方法 -- 貌似没用
--(void)setAssets:(NSArray *)a
+-(void)setAssets:(NSSet *)a
 {
     _assets = [a mutableCopy];
 }
 
 //-- 貌似没用
--(NSArray *)assets
+-(NSSet *)assets
 {
     return [_assets copy];
 }
@@ -58,7 +59,7 @@
     //assets是否为nil？
     if (!_assets) {
         //创建数组
-        _assets = [[NSMutableArray alloc]init];
+        _assets = [[NSMutableSet alloc]init];
     }
     [_assets addObject:a];
     a.holder = self;
@@ -69,7 +70,7 @@
     //assets是否为nil？
     if (!_assets) {
         //创建数组
-        _assets = [[NSMutableArray alloc]init];
+        _assets = [[NSMutableSet alloc]init];
     }
     [_assets removeObject:a];
 }
