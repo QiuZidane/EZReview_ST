@@ -17,7 +17,9 @@ int main(int argc, const char * argv[]) {
     double *pointer; //= &anotherPart;
     
     //将integerPart的地址作为实参传入----即将计算结果存放到integerPart的地址中
-    fractionPart = modf(pi, pointer); //----送NULL作为参数，报 EXC_BAD_ACCESS (code=1, address=0x0)
+    fractionPart = modf(pi, &integerPart);
+    
+//    fractionPart = modf(pi, pointer); //----送NULL作为参数，报 EXC_BAD_ACCESS (code=1, address=0x0)
     
     //获取integer地址上的值
     printf("integerPart=%0.0f,fractionPart=%0.2f\n",integerPart,fractionPart);
