@@ -35,6 +35,8 @@ int main(int argc, const char * argv[]) {
         NSLog(@"PP= %@",QSD);
       
         NSLog(@"MYSPEED = %d",[test1 mySpeed]);
+        NSLog(@"%@ 写于 %@",@"丘士丹",
+              @"2015/11/1");
         
     }
     return 0;
