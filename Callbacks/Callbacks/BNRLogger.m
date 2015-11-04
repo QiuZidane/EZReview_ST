@@ -56,8 +56,10 @@
     NSLog(@"connection failed: %@", [error localizedDescription]);
 }
 
--(void)diyFunc:(NSTimer *)t Seconds:(NSTimeInterval *)a{
-    
+-(void)zoneChange:(NSNotification *)note
+{
+    NSLog(@"The system time zone has changed!");
 }
+
 
 @end

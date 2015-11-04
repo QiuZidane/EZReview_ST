@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NSString* String;
+
 @interface BNRLogger : NSObject <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 {
     NSMutableData *_incomingData;
 }
 @property (nonatomic) NSDate *lastTime;
+@property (nonatomic) String a;
+
 -(NSString *)lastTimeString;
 -(void)updateLastTime:(NSTimer *)t;
--(void)diyFunc:(NSTimer *)t Seconds:(NSTimeInterval *)a;
 
 @end
