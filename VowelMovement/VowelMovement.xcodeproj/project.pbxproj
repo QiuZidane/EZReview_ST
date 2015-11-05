@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E03092F1BEA460100BAE6C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E03092E1BEA460100BAE6C6 /* main.m */; };
+		8E5529401BEB895700FA48C9 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E55293F1BEB895700FA48C9 /* MyClass.m */; settings = {ASSET_TAGS = (); }; };
+		8E5529441BEBAB5300FA48C9 /* NSString+MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5529431BEBAB5300FA48C9 /* NSString+MyClass.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		8E03092B1BEA460100BAE6C6 /* VowelMovement */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VowelMovement; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E03092E1BEA460100BAE6C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8E55293E1BEB895700FA48C9 /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
+		8E55293F1BEB895700FA48C9 /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
+		8E5529421BEBAB5300FA48C9 /* NSString+MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MyClass.h"; sourceTree = "<group>"; };
+		8E5529431BEBAB5300FA48C9 /* NSString+MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MyClass.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				8E03092E1BEA460100BAE6C6 /* main.m */,
+				8E5529421BEBAB5300FA48C9 /* NSString+MyClass.h */,
+				8E5529431BEBAB5300FA48C9 /* NSString+MyClass.m */,
+				8E55293E1BEB895700FA48C9 /* MyClass.h */,
+				8E55293F1BEB895700FA48C9 /* MyClass.m */,
 			);
 			path = VowelMovement;
 			sourceTree = "<group>";
@@ -118,7 +128,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5529401BEB895700FA48C9 /* MyClass.m in Sources */,
 				8E03092F1BEA460100BAE6C6 /* main.m in Sources */,
+				8E5529441BEBAB5300FA48C9 /* NSString+MyClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +247,7 @@
 				8E0309341BEA460100BAE6C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

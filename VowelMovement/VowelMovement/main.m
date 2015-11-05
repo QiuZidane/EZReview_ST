@@ -7,6 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MyClass.h"
+#define STR(x) # x
+typedef int myint;
+#define _X(A, B) (A#B) 
+
 
 //声明Block变量
 typedef void (^ArrayEnumerationBlock)(id, NSUInteger, BOOL*);
@@ -50,6 +55,12 @@ int main(int argc, const char * argv[]) {
         [oldStrings enumerateObjectsUsingBlock:devowelizer];
         NSLog(@"new strings : %@" , newStrings);
 
+        MyClass *myclass = [[MyClass alloc]init];
+        NSLog(@"name = %@",[myclass name]);
+        [myclass initName];
+        NSLog(@"name = %@",[myclass name]);
+        NSLog(@STR(Programming in Objective-c./n));
+        myint i = 0;
 
     }
     return 0;
