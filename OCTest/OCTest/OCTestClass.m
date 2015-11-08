@@ -8,7 +8,20 @@
 
 #import "OCTestClass.h"
 
+@interface OCTestClass ()
+{
+    NSString *str1;
+    @protected NSString *str2;
+    @private NSString *str3;
+    @public NSString *str4;
+}
+
+@end
+
 @implementation OCTestClass
+
+
+
 
 const NSString *QSD = @"QSD";
 
@@ -29,5 +42,7 @@ const NSString *QSD = @"QSD";
     NSLog(@"A_A = %f",A_A);
     return MYSPEED;
 }
+
+
 
 @end

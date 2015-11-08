@@ -10,7 +10,7 @@
 #import "MyClass.h"
 #define STR(x) # x
 typedef int myint;
-#define _X(A, B) (A#B) 
+#define _X(A, B) (A#B)
 
 
 //声明Block变量
@@ -52,16 +52,29 @@ int main(int argc, const char * argv[]) {
         };
         
         //NSArray的enumerateObjectsUsingBlock方法会讲数组里面每个object都用后面的block处理一次
-        [oldStrings enumerateObjectsUsingBlock:devowelizer];
-        NSLog(@"new strings : %@" , newStrings);
-
-        MyClass *myclass = [[MyClass alloc]init];
-        NSLog(@"name = %@",[myclass name]);
-        [myclass initName];
-        NSLog(@"name = %@",[myclass name]);
-        NSLog(@STR(Programming in Objective-c./n));
-        myint i = 0;
-
-    }
-    return 0;
-}
+        //        [oldStrings enumerateObjectsUsingBlock:devowelizer];
+        //使用匿名Block
+        [oldStrings enumerateObjectsUsingBlock:^(id string, NSUInteger i, BOOL *stop){
+            
+            NSRange yRange = [string rangeOfString:@"y" options:NSCaseInsensitiveSearch];
+            if (yRange.location != NSNotFound) {
+                NSLog(@"找到y,退出枚举");
+                *stop = YES;    //执行完当前的block对象后终止枚举过程
+                return;         //结束当前正在执行的block对象,继续执行下一个对象
+                
+            }
+        }];
+        
+            
+            NSLog(@"new strings : %@" , newStrings);
+            
+            MyClass *myclass = [[MyClass alloc]init];
+            NSLog(@"name = %@",[myclass name]);
+            [myclass initName];
+            NSLog(@"name = %@",[myclass name]);
+            NSLog(@STR(Programming in Objective-c./n));
+            myint i = 0;
+            
+        }
+         return 0;
+         }

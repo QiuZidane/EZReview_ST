@@ -17,6 +17,7 @@ typedef NSString* String;
 @property (nonatomic) NSDate *lastTime;
 @property (nonatomic) String a;
 
+-(void)zoneChange:(NSNotification *)note;
 -(NSString *)lastTimeString;
 -(void)updateLastTime:(NSTimer *)t;
 

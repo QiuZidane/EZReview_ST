@@ -28,15 +28,15 @@ int main(int argc, const char * argv[]) {
             NSLog(@"false");
         }
         
-        //字典可以嵌套
-        NSDictionary *numberOfMoons = @{
-                                        @"Mercury"  :@0,
-                                        @"Venus"    :@0,
-                                        @"Earth"    :@[@"A",@"B"],
-                                        @"Mars"     :@"2",
-                                        @"Jupiter"  :@[],
-                                        @"Saturn"   :@[@"Luna"],
-                                        };
+//字典可以嵌套
+NSDictionary *numberOfMoons = @{
+                                @"Mercury"  :@0,
+                                @"Venus"    :@0,
+                                @"Earth"    :@[@"A",@"B"],
+                                @"Mars"     :@"2",
+                                @"Jupiter"  :@[],
+                                @"Saturn"   :@[@"Luna"],
+                                };
         
         NSString *marsMoonCount = numberOfMoons[@"Mars"];   //自动将NSNumber转换成NSString了
         NSLog(@"marsMoonCount=%@",marsMoonCount);

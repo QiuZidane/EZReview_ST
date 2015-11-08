@@ -20,6 +20,9 @@
 
 @end
 
+typedef void (^nsBlock)();
+
+
 @implementation BNREmployee
 
 -(double)yearOfEmployment
@@ -94,6 +97,14 @@
 -(void)dealloc  //程序运行结束,都会调用这个方法释放对象内存
 {
     NSLog(@"deallocation %@",self);
+}
+
+-(void)printBlock
+{
+    nsBlock myBlock = ^{
+        NSLog(@"Employee : %@", self);
+    };
+    myBlock();
 }
 
 

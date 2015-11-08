@@ -2,6 +2,21 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TEST001/TEST001.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iTahDoodle/iTahDoodle.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BlockResearch002/BlockResearch002.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BlockResearch001/BlockResearch001.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SingletonTest/SingletonTest.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:VowelMovement/VowelMovement.xcodeproj">
    </FileRef>
    <FileRef

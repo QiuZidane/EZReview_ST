@@ -34,6 +34,7 @@
 -(void)addAssets:(BNRAsset *)a;
 -(void)removeAssets:(BNRAsset *)a;
 -(unsigned int)valueOfAssets;
+-(void)printBlock;
 
 
 

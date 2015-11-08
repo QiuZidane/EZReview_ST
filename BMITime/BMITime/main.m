@@ -10,6 +10,8 @@
 #import "BNREmployee.h"
 #import "BNRAsset.h"
 
+typedef void(^BLOCKPRINT)();
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
@@ -145,12 +147,25 @@ int main(int argc, const char * argv[]) {
         
         
 //        [employees removeAllObjects];   //removeabject后立刻调用dealloc，
-        employees = nil;              //而指针指向nil貌似要等autoreleasepool来释放
+//        employees = nil;              //而指针指向nil貌似要等autoreleasepool来释放
         
         NSLog(@"111");
-             
+        
+        BNREmployee *zidane = employees[1];
+        [zidane printBlock];
+        
+        NSLog(@"aaaa");
+        
+        NSLog(@"Employee : %@",zidane);
+        
+        NSLog(@"bbbb");
         
         
+        BLOCKPRINT myBlock = ^{
+            NSLog(@"Employee : %@", zidane);
+        };
+        myBlock();
+            
     }
     
     sleep(2);

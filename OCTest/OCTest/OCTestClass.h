@@ -11,6 +11,7 @@
 #define A_A 1212.111
 extern const NSString *QSD;
 
+
 //传统方式：
 enum BlenderSpeed {
     BlenderSpeedStir = 1,
@@ -48,6 +49,7 @@ typedef NS_ENUM(char, myEnum) {
 @property (nonatomic) enum BlenderSpeed speedOnPro;
 @property (nonatomic) myDirection direction;
 @property (nonatomic) myEnum me;
+@property (atomic,readwrite,retain) NSString *testStr;
 
 -(void)setSpeed:(enum BlenderSpeed)x;
 -(int)speed;
@@ -55,3 +57,5 @@ typedef NS_ENUM(char, myEnum) {
 
 
 @end
+
+
