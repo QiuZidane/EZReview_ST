@@ -8,13 +8,15 @@
 
 #import "BNRAppliance.h"
 
-@implementation BNRAppliance
+@implementation BNRAppliance 
+
+
 
 - (instancetype)init {
     
     //如果想禁用init，可以这样写
-    [NSException raise:@"BNRWallSafeInitialization"
-                format:@"Use initWithSecretCode: not init"];
+//    [NSException raise:@"BNRWallSafeInitialization"
+//                format:@"Use initWithSecretCode: not init"];
     
     return [self initWithProductName:@"unknown"];
     
@@ -34,6 +36,35 @@
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"productName = %@ , voltage = %d",_productName,_voltage];
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    BNRAppliance *a = [[BNRAppliance allocWithZone:zone]initWithProductName:@"EEE"];
+    return a;
+}
+
+- (void)setCurrentState:(NSString *)currentState {
+    _currentState = [currentState copy];
+    NSLog(@"1234");
+}
+
+@synthesize age = _age;
+
+- (void)setAge:(NSInteger)age
+{
+    _age = age;
+}
+- (NSInteger)age
+{
+    return _age;
+}
+
+
+- (void)setBb:(NSString *)bb
+{
+    if (_bb!=bb) {
+      _bb = [bb copy];
+    }
 }
 
 @end

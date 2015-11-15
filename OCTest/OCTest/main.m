@@ -16,7 +16,7 @@ typedef double(^block1)(double,double);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-
+        
         NSLog(@"\u03c0 is %f",M_PI);
         NSLog(@"A_A = %f",A_A);
         NSLog(@"%d is larger ",MYMAX(10, 12));
@@ -35,7 +35,7 @@ int main(int argc, const char * argv[]) {
         test1.me = bb;
         NSLog(@"me = %u",test1.me);
         NSLog(@"PP= %@",QSD);
-      
+        
         NSLog(@"MYSPEED = %d",[test1 mySpeed]);
         NSLog(@"%@ 写于 %@",@"丘士丹",
               @"2015/11/1");
@@ -59,37 +59,37 @@ int main(int argc, const char * argv[]) {
             printf("method does not exist \n");
         }
         
-//Property List: PLIST
-//新建plist文件，写入本地--使用NSArray的writeToFile方法
-NSMutableArray *plistArray = [NSMutableArray array];
-NSMutableDictionary *plist = [[NSMutableDictionary alloc]init];
-
-[plist setObject:@[@"1",@"2",@"3"] forKey:@"NSArray"];
-[plist setObject:[NSNumber numberWithInt:100] forKey:@"NSNumber"];
-[plist setObject:[[NSDictionary alloc]initWithObjects:@[@"dict",@"123"] forKeys:@[@"NSString1",@"NSString2"]] forKey:@"NSDictionary"];
-
-[plistArray addObject:plist];
-
-plist = [[NSMutableDictionary alloc]init];
-[plist setObject:[NSDate date] forKey:@"NSDate"];
-[plist setObject:@YES forKey:@"BOOL"];
-[plistArray addObject:plist];
-
-NSLog(@"plistArray bool = %@",[plistArray[1] objectForKey:@"BOOL"]);
-
-[plistArray writeToFile:@"/tmp/plistArray.plist" atomically:YES];
-
-
-//新建NSArray，读取plist文件--使用arrayWithContentsOfFile方法
-NSArray *plistArray2 = [NSArray arrayWithContentsOfFile:@"/tmp/plistArray.plist"];
-if (plistArray2.count != 0) {
-    for (NSDictionary *d in plistArray2) {
-        NSLog(@"id in dictionary : %@", [[d objectEnumerator] allObjects]); //枚举dict内每个元素
-        NSLog(@"====================");
-    }
-} else {
-    NSLog(@"load error");
-}
+        //Property List: PLIST
+        //新建plist文件，写入本地--使用NSArray的writeToFile方法
+        NSMutableArray *plistArray = [NSMutableArray array];
+        NSMutableDictionary *plist = [[NSMutableDictionary alloc]init];
+        
+        [plist setObject:@[@"1",@"2",@"3"] forKey:@"NSArray"];
+        [plist setObject:[NSNumber numberWithInt:100] forKey:@"NSNumber"];
+        [plist setObject:[[NSDictionary alloc]initWithObjects:@[@"dict",@"123"] forKeys:@[@"NSString1",@"NSString2"]] forKey:@"NSDictionary"];
+        
+        [plistArray addObject:plist];
+        
+        plist = [[NSMutableDictionary alloc]init];
+        [plist setObject:[NSDate date] forKey:@"NSDate"];
+        [plist setObject:@YES forKey:@"BOOL"];
+        [plistArray addObject:plist];
+        
+        NSLog(@"plistArray bool = %@",[plistArray[1] objectForKey:@"BOOL"]);
+        
+        [plistArray writeToFile:@"/tmp/plistArray.plist" atomically:YES];
+        
+        
+        //新建NSArray，读取plist文件--使用arrayWithContentsOfFile方法
+        NSArray *plistArray2 = [NSArray arrayWithContentsOfFile:@"/tmp/plistArray.plist"];
+        if (plistArray2.count != 0) {
+            for (NSDictionary *d in plistArray2) {
+                NSLog(@"id in dictionary : %@", [[d objectEnumerator] allObjects]); //枚举dict内每个元素
+                NSLog(@"====================");
+            }
+        } else {
+            NSLog(@"load error");
+        }
         
         
         
